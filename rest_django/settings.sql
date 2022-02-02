@@ -1,0 +1,4 @@
+-- settings.sql
+CREATE DATABASE rest;
+CREATE USER restuser WITH PASSWORD 'rest';
+GRANT ALL PRIVILEGES ON DATABASE rest TO restuser;
