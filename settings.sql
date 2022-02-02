@@ -1,0 +1,3 @@
+CREATE DATABASE djangorest;
+CREATE USER restuser WITH PASSWORD 'rest';
+GRANT ALL PRIVILEGES ON DATABASE djangorest TO restuser;
