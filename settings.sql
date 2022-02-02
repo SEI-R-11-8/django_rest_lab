@@ -1,0 +1,4 @@
+-- settings.sql
+CREATE DATABASE nfl;
+CREATE USER nfluser WITH PASSWORD 'nfl';
+GRANT ALL PRIVILEGES ON DATABASE nfl TO nfluser;
