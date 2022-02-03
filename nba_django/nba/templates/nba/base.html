@@ -1,0 +1,15 @@
+{% load static %}
+<html>
+  <head>
+    <title>NBA Conference Stats</title>
+    <link rel="stylesheet" href="{% static 'css/nba.css' %}" />
+  </head>
+  <body>
+    <h1>NBA Conference Stats</h1>
+    <nav>
+      <a href="/teams">Teams</a>
+      <a href="/">Players</a>
+    </nav>
+    {% block content %} {% endblock %}
+  </body>
+</html>

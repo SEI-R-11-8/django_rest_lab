@@ -1,0 +1,19 @@
+{% extends 'nba/base.html' %} {% block content %}
+<h2>
+  {{ player.name }} <a href="">(edit)</a>
+</h2>
+<img src="{{ player.photo_url }}" alt="" class="player-photo" />
+
+<a href="">Delete</a>
+
+<h3>teams<a href="">(+)</a></h3>
+<ul>
+  {% for team in player.teams.all %}
+  <li>
+    <a href="">
+        {{ team.name }}-
+      </a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}
