@@ -1,0 +1,15 @@
+<h2>{{ team.name }} <a href="{% url 'team_edit' pk=team.pk %}">(edit)</a></h2>
+<h4>{{ team.location }}</h4>
+
+<img src="{{ team.photo_url }}" alt="" class="team-photo" />
+
+<h3>Players <a href="">(+)</a></h3>
+<ul>
+  {% for song in team.players.all %}
+  <li>
+    <a href="{% url 'player_detail' pk=song.pk %}">{{ player.name }}-{{ player.position }}</a>
+  </li>
+  {% endfor %}
+</ul>
+<a href="{% url 'team_delete' pk=team.pk %}">Delete</a>
+<a href="{% url 'team_list' %}">Home</a>

@@ -1,0 +1,12 @@
+{% extends 'django_rest_lab/base.html' %}
+{% block content %}
+<h2>Players <a href="">(+)</a></h2>
+
+<ul>
+    {% for player in players %}
+    <li>
+        <a href="{% url 'player_detail' player.pk %}">{{ player.name }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
