@@ -1,0 +1,15 @@
+{% load static %}
+<html>
+  <head>
+    <title>Basketball</title>
+    <link rel="stylesheet" href="{% static 'css/django_rest_lab.css' %}">
+  </head>
+  <body>
+    <h1>Basketball</h1>
+    <nav>
+      <a href="/players">Players</a>
+      <a href="/">Teams</a>
+    </nav>
+    {% block content %} {% endblock %}
+  </body>
+</html>
