@@ -1,6 +1,6 @@
 from rest_framework import generics
-from .serializers import PlayerSerializer
-from .models import Players
+from .serializers import PlayerSerializer, TeamSerializer
+from .models import Players, Team
 
 
 class PlayerList(generics.ListCreateAPIView):
@@ -11,6 +11,16 @@ class PlayerList(generics.ListCreateAPIView):
 class PlayerDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Players.objects.all()
     serializer_class = PlayerSerializer
+
+
+class TeamList(generics.ListCreateAPIView):
+    queryset = Team.objects.all()
+    serializer_class = TeamSerializer
+
+
+class TeamDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Team.objects.all()
+    serializer_class = TeamSerializer
 
 # from django.shortcuts import render
 # redirect

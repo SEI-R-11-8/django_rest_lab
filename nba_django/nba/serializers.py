@@ -10,18 +10,18 @@ class PlayerSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Players
-        fields = ('name', 'position', 'age', 'gp',
-                  'injured_reserved', 'points', 'photo_url', 'teams')
+        fields = ('name', 'teams', 'position', 'age', 'gp',
+                  'injured_reserved', 'points', 'photo_url', )
 
 
 class TeamSerializer(serializers.HyperlinkedModelSerializer):
-    player = serializers.HyperlinkedRelatedField(
-        view_name='player_detail',
-        many=True,
-        read_only=True
-    )
+    # players = serializers.HyperlinkedRelatedField(
+    #     view_name='player_detail',
+    #     many=True,
+    #     read_only=True
+    # )
 
     class Meta:
         model = Team
         fields = ('name', 'location', 'conference',
-                  'wins', 'losses', 'photo_url', 'player',)
+                  'wins', 'losses', 'photo_url',)
