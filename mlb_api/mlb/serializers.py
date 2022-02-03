@@ -76,7 +76,7 @@ class TeamSerializer(serializers.HyperlinkedModelSerializer):
   )
 
   team_url = serializers.ModelSerializer.serializer_url_field(
-    view_name = 'division_detail'
+    view_name = 'team_detail'
   )
 
   class Meta:
