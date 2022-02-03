@@ -1,0 +1,3 @@
+CREATE DATABASE sport;
+CREATE USER sportuser WITH PASSWORD 'sport';
+GRANT ALL PRIVILEGES ON DATABASE sport TO sportuser;
