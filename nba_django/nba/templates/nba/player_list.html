@@ -1,0 +1,12 @@
+{% extends 'nba/base.html' %} {% block content %}
+<h2>Players<a href="">(+)</a></h2>
+<ul>
+  {% for player in players %}
+  <li>
+    <a href="">
+        {{ player.name }}
+      </a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

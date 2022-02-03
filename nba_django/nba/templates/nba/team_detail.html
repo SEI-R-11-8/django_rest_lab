@@ -1,0 +1,7 @@
+{% extends 'nba/base.html' %} {% block content %}
+
+<h2>{{ team.name }} <a href="">(edit)</a></h2>
+<h3> {{ team.player.name }}</h3>
+<a href="">Delete</a>
+Player: {{ team.player }}
+{% endblock %}
