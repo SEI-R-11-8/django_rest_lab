@@ -1,0 +1,3 @@
+CREATE DATABASE rest_lab;
+CREATE USER rest_lab WITH PASSWORD 'rest_lab';
+GRANT ALL PRIVILEGES ON DATABASE rest_lab TO rest_lab;
