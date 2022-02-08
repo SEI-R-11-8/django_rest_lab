@@ -1,0 +1,13 @@
+{% extends 'la_liga/base.html' %} {% block content %}
+
+
+<h2>Players</h2>
+<ul>
+    {% for player in players %}
+    <li>
+        <a href="{% url 'player_details' pk=player.pk %}">{{ player.name }}-{{ player.position }}</a>
+    </li>
+    {% endfor %}
+</ul>
+<h4><a href="{% url 'player_create' %}">Add a player</a></h4>
+{% endblock %}

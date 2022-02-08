@@ -1,0 +1,15 @@
+{% load static %}
+<html>
+    <head>
+        <title>La Liga</title>
+        <link rel="stylesheet" href="{% static 'css/la_liga.css' %}" />
+    </head>
+    <body>
+        <h1>la liga</h1>
+        <nav>
+            <a href="/players">Player</a>
+            <a href="/">Team</a>
+        </nav>
+        {% block content %} {% endblock %}
+    </body>
+</html>

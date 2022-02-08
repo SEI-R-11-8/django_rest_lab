@@ -1,0 +1,7 @@
+{% extends 'la_liga/base.html' %} {% block content %}
+
+<h2>{{ player.name }} <a href="{% url 'player_edit' pk=player.pk %}">(edit)</a></h2>
+<h3>Popular in the {{ player.team.name }}</h3>
+<p>{{player.position}}</p>
+<a href="{% url 'player_delete' pk=player.pk %}">Delete</a>
+{% endblock %} 
